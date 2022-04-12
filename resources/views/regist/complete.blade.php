@@ -6,5 +6,6 @@
 </head>
 <body>
   {{ $user->name }}さんを登録しました
+  <p><a href="{{ url('home') }}">ホーム画面へ</a></p>
 </body>
 </html>
