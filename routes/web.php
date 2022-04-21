@@ -34,3 +34,7 @@ Route::get('/login', [LoginController::class, 'index'])
     ->name('login');
 Route::post('/Login', [LoginController::class, 'authenticate'])
     ->middleware('guest');
+
+Route::get('/logout', [LoginController::class, 'logout'])
+    ->middleware('auth')
+    ->name('logout');
