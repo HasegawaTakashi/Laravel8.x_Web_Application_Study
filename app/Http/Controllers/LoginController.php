@@ -25,9 +25,11 @@ class LoginController extends Controller
             return redirect()->intended(RouteServiceProvider::HOME);
         }
 
-        return back()->withErrors([
-            'message' => 'メールアドレスまたはパスワードが正しくありません。',
-        ]);
+        return back()->withErrors(
+            [
+                'message' => 'メールアドレスまたはパスワードが正しくありません。',
+            ]
+        );
     }
 
     public function logout(Request $request)
