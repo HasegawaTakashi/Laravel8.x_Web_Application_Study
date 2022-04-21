@@ -10,7 +10,7 @@
 @isset($errors)
   <p style="color:red">{{ $errors->first('message') }}</p>
 @endisset
-<form name="loginform" action="/home" method="post">
+<form name="loginform" action="/login" method="post">
   {{ csrf_field() }}
   <dl>
     <dt>メールアドレス:</dt><dd><input type="text" name="email" size="30" value="{{ old('email') }}"></dd>
