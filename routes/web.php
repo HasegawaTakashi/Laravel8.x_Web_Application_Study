@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +27,10 @@ Route::get('/register', [RegisterController::class, 'create'])
     ->middleware('guest')
     ->name('register');
 Route::post('/register', [RegisterController::class, 'store'])
+    ->middleware('guest');
+
+Route::get('/login', [LoginController::class, 'index'])
+    ->middleware('guest')
+    ->name('login');
+Route::get('/postLogin', [LoginController::class, 'authenticate'])
     ->middleware('guest');
